@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+    <edu.standord.cs108.mobiledraw.customDrawView
+        android:id="@+id/customView"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_gravity="fill"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:checkedButton="@id/Rect"
+        android:id="@+id/modeSelect">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Select"
+            android:text="Select"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Rect"
+            android:text="Rect"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Oval"
+            android:text="Oval"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Erase"
+            android:text="Erase"/>
+    </RadioGroup>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:text="x: " />
+
+    <EditText
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:id="@+id/x"
+        android:inputType="numberDecimal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:text="y: " />
+
+    <EditText
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/y"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:text="Width: " />
+
+    <EditText
+        android:textSize="15dp"
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/width"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:text="Height: " />
+
+    <EditText
+        android:layout_width="0sp"
+        android:layout_weight="1"
+        android:textSize="15dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:id="@+id/height"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE"
+            android:onClick="updateView"
+            android:id="@+id/update" />
+    </LinearLayout>
+
+</LinearLayout>
